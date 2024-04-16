@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { useLoadingStore } from '../../store/loading';
+import { useLoadingStore } from '../../../store/loading';
 
 interface SpinnerWrapperProps {
   $loading: boolean;
