@@ -1,5 +1,5 @@
 import React from 'react';
-import { useThemeStore } from '../../store/theme';
+import { useThemeStore } from '../../../store/theme';
 import styled from 'styled-components';
 
 type ThemeProps = {
