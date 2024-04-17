@@ -13,14 +13,14 @@ const HeaderWrapper = styled.div`
 `;
 
 const LogoWrapper = styled.div`
-  width: 20%;
+  width: 50%;
 
   span {
     font-size: 2rem;
   }
 
   small {
-    font-size: 3rem;
+    font-size: 1rem;
   }
 `;
 const Initial = styled.span`
@@ -46,7 +46,7 @@ export const AppHeader = () => {
     <HeaderWrapper>
       <LogoWrapper>
         <Initial>W</Initial>
-        it
+        <span>it</span> <small> where is there </small>
       </LogoWrapper>
 
       <ThemeWrapper>
