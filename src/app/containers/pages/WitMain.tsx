@@ -2,6 +2,7 @@ import React from 'react';
 import { SearchLayout } from 'app/components/layout/SearchLayout';
 import { Map, useKakaoLoader } from 'react-kakao-maps-sdk';
 import styled from 'styled-components';
+import { FooterLayout } from 'app/components/layout/FooterLayout';
 
 const MapWrapper = styled.div`
   width: 100%;
@@ -17,6 +18,7 @@ export const WitMain = () => {
     <>
       <MapWrapper>
         <SearchLayout />
+        <FooterLayout />
         <Map
           center={{
             lat: 37.3326,
@@ -28,7 +30,7 @@ export const WitMain = () => {
             height: '100%',
           }}
           level={10}
-        ></Map>
+        />
       </MapWrapper>
     </>
   );
