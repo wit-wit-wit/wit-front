@@ -24,7 +24,7 @@ export const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<WitMain />} />
-          {/*<Route path='/search' element={<Search />} />*/}
+          {/*<Route path='/search' element={<SearchLayout />} />*/}
         </Routes>
       </BrowserRouter>
     </AppPage>
