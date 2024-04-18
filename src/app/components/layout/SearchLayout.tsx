@@ -23,6 +23,7 @@ const SearchWrapper = styled.div`
   box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.2);
 
   input {
+    width: 100% !important;
     border-radius: 0.725rem !important;
   }
 
@@ -33,7 +34,7 @@ const SearchWrapper = styled.div`
 const ButtonWrapper = styled.div`
   background-color: var(--main-green);
   height: 3rem;
-  width: 3rem;
+  width: 13%;
   border-radius: 0.725rem;
   box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.2);
 
