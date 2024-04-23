@@ -67,9 +67,9 @@ const MainButtonWrapper = styled.div`
 
 const buttons = [
   { title: '지도', value: 'map', icon: 'fa-map' },
-  { title: '내주변', value: 'near', icon: 'fa-location-arrow' },
+  { title: '내주변', value: 'near', icon: 'fa-flag' },
   { title: 'WIT', value: 'main', icon: '' },
-  { title: '찜', value: 'like', icon: 'fa-heart' },
+  { title: '찜', value: 'like', icon: 'fa-bookmark' },
   { title: '마이', value: 'my', icon: 'fa-user' },
 ];
 export const FooterLayout = () => {
@@ -91,7 +91,7 @@ export const FooterLayout = () => {
               className={`button-${idx} ${page === button.title ? 'active' : ''}`}
               onClick={() => setPage(button.title)}
             >
-              <i className={`fa-solid ${button.icon}`}></i>
+              <i className={`${page === button.title ? 'fa-solid' : 'fa-regular'} ${button.icon}`}></i>
               <span>{button.title}</span>
             </FooterButton>
           );
