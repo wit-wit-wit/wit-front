@@ -6,6 +6,6 @@ interface PageState {
 }
 
 export const usePageStore = create<PageState>()((set) => ({
-  page: 'main',
+  page: 'WIT',
   setPage: (page) => set({ page: page }),
 }));
