@@ -2,7 +2,8 @@ import React, { useEffect } from 'react';
 import '../../App.scss';
 import styled from 'styled-components';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { WitMain } from 'app/containers/pages/WitMain';
+import { WitMap } from 'app/containers/pages/map/WitMap';
+import { WitMain } from 'app/containers/pages/main/WitMain';
 
 const AppPage = styled.div`
   width: 100%;
@@ -24,6 +25,7 @@ export const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<WitMain />} />
+          <Route path='/map' element={<WitMap />} />
           {/*<Route path='/search' element={<SearchLayout />} />*/}
         </Routes>
       </BrowserRouter>
