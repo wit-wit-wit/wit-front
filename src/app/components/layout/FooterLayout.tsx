@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import { usePageStore } from '../../../store/page';
+import { useNavigate } from 'react-router-dom';
 
 const FooterWrapper = styled.div`
   width: 100%;
@@ -30,6 +31,7 @@ const FooterButton = styled.div`
   flex-direction: column;
   justify-content: end;
   align-items: center;
+  background-color: white;
   border-top: 1px solid var(--main-gray);
 
   i {
@@ -74,13 +76,17 @@ const buttons = [
 ];
 export const FooterLayout = () => {
   const { page, setPage } = usePageStore();
+  const navigate = useNavigate();
+  useEffect(() => {
+    navigate(`/${page}`);
+  }, [page]);
 
   return (
     <FooterWrapper>
       {buttons?.map((button, idx) => {
         if (button.title === 'WIT')
           return (
-            <MainButtonWrapper className={page === 'WIT' ? 'active' : ''} onClick={() => setPage(button.title)}>
+            <MainButtonWrapper className={page === 'main' ? 'active' : ''} onClick={() => setPage(button.value)}>
               <span>WIT</span>
             </MainButtonWrapper>
           );
@@ -88,10 +94,10 @@ export const FooterLayout = () => {
           return (
             <FooterButton
               key={idx}
-              className={`button-${idx} ${page === button.title ? 'active' : ''}`}
-              onClick={() => setPage(button.title)}
+              className={`button-${idx} ${page === button.value ? 'active' : ''}`}
+              onClick={() => setPage(button.value)}
             >
-              <i className={`${page === button.title ? 'fa-solid' : 'fa-regular'} ${button.icon}`}></i>
+              <i className={`${page === button.value ? 'fa-solid' : 'fa-regular'} ${button.icon}`}></i>
               <span>{button.title}</span>
             </FooterButton>
           );

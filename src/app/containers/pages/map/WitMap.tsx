@@ -2,6 +2,7 @@ import React from 'react';
 import { SearchLayout } from 'app/components/layout/SearchLayout';
 import { Map, useKakaoLoader } from 'react-kakao-maps-sdk';
 import styled from 'styled-components';
+import { FooterLayout } from 'app/components/layout/FooterLayout';
 
 const MapWrapper = styled.div`
   width: 100%;
@@ -30,6 +31,7 @@ export const WitMap = () => {
           level={10}
         />
       </MapWrapper>
+      <FooterLayout />
     </>
   );
 };

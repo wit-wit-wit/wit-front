@@ -3,7 +3,7 @@ import { useThemeStore } from '../../../store/theme';
 import styled from 'styled-components';
 
 type ThemeProps = {
-  children: JSX.Element[];
+  children: JSX.Element;
 };
 
 const ThemeWrapper = styled.article`
